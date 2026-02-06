@@ -1,0 +1,13 @@
+pymilvus
+loguru
+fastapi
+uvicorn
+aiohttp
+asyncio
+arxiv
+pytz
+openai
+schedule
+pdfplumber
+requests
+minio
