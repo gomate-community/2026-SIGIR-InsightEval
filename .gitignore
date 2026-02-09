@@ -63,4 +63,6 @@ Resources/temp/
 .jbeval
 .idea
 frontend/node_modules
+papers
+docs
 
