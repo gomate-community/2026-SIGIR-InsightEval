@@ -10,7 +10,7 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from loguru import logger
-from backend.routers import  chat_router, insight_router
+from backend.routers import  chat_router, insight_router, local_insight_router
 
 app = FastAPI(
     title="IR-Trends API",
@@ -36,6 +36,9 @@ logger.info("Chat路由注册完成")
 
 app.include_router(insight_router.router)
 logger.info("Insight路由注册完成")
+
+app.include_router(local_insight_router.router)
+logger.info("Local Insight路由注册完成")
 
 
 @app.get("/")

@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils"
 const navItems = [
   { label: "Features", href: "/" },
   { label: "Demo", href: "/demo" },
+  { label: "Local Analysis", href: "/local" },
 ]
 
 export function Header() {
