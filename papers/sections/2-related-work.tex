@@ -20,3 +20,11 @@ These systems primarily focus on the \textit{generation} and \textit{organizatio
 The most closely related line of work concerns automated assessment of novelty and insight in scholarly documents. Arts et al.~\cite{Arts_2025} pioneer the measurement of novel scientific ideas directly from publication text, moving beyond citation-based metrics. NovAScore~\cite{ai-etal-2025-novascore} proposes an automated metric for evaluating document-level novelty by aggregating novelty and salience scores of atomic information units. OpenNovelty~\cite{zhang2026opennoveltyllmpoweredagenticverifiable} introduces an LLM-powered agentic system for verifiable scholarly novelty assessment through literature-grounded comparison. Shahid et al.~\cite{shahid-etal-2025-literature} further develop a literature-grounded framework for assessing the novelty of scientific ideas using retrieval-augmented generation with faceted re-ranking. IdeaBench~\cite{Guo2024IdeaBenchBL} provides a benchmark for evaluating LLMs' ability to generate novel research ideas. For impact-oriented analysis, Arnaout et al.~\cite{Arnaout2025IndepthRI} propose fine-grained temporal citation analysis for in-depth research impact summarization. InsightGUIDE~\cite{Koloveas2025InsightGUIDEAO} offers an opinionated AI assistant for guided critical reading of scientific literature, while Vo and Simmie~\cite{Vo2024AssessingSI} provide a systematic review of tasks, tools, and techniques for assessing scientific inquiry.
 
 While novelty assessment evaluates the \textit{newness} of ideas relative to prior work, it does not measure the \textit{depth of understanding} a paper achieves. A paper may introduce no novel methods yet still provide deep, integrative insight by synthesizing, reinterpreting, or abstracting known findings. InsightEval distinguishes itself by jointly evaluating information gain and the level of understanding---characterized through depth, breadth, and height---thereby capturing a complementary dimension that existing novelty metrics do not address.
+
+\begin{figure}[!t]
+\centering
+% TODO: Insert system architecture diagram
+\includegraphics[width=0.5\textwidth]{figures/InsightEvaluation.pdf}
+\caption{An Overview of the InsightEval Pipeline.}
+\label{fig:architecture}
+\end{figure}

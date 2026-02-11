@@ -12,15 +12,7 @@ Inspired by a cognitive hypothesis---that the value of reading a paper can be me
     \item \textbf{Height}: Does the author abstract findings to a higher conceptual level or propose generalizable principles?
 \end{itemize}
 
-\begin{figure}[!t]
-\centering
-% TODO: Insert system architecture diagram
-\fbox{\parbox{0.95\columnwidth}{\centering [Figure Placeholder: System Architecture Diagram]\\ Showing the four-stage pipeline: Opinion Extraction $\rightarrow$ Evidence Retrieval $\rightarrow$ Insight Scoring $\rightarrow$ Report Synthesis}}
-\caption{An Overview of the InsightEval System Architecture.}
-\label{fig:architecture}
-\end{figure}
-
-Our system addresses several key requirements of the SIGIR Demonstrations Track. \textit{Target users} include senior reviewers seeking efficient paper quality assessment, junior researchers learning to write insightful introductions, and research institutions conducting systematic evaluation of scholarly output. \textit{The problem} we address is the gap between quantitative bibliometrics and qualitative assessment of intellectual contribution~\cite{Arnaout2025IndepthRI,Vo2024AssessingSI}. Unlike citation analysis tools (e.g., Connected Papers~\cite{connectedpapers}) that focus on network structure, or critical reading assistants (e.g., InsightGUIDE~\cite{Koloveas2025InsightGUIDEAO}) that provide opinion-level guidance, InsightEval examines the \textit{semantic relationship} between a paper's claims and its supporting references and quantifies insightfulness along interpretable dimensions.
+The increasing complexity of scholarly communication demands sophisticated tools for deep content analysis. \textit{Target users} include senior reviewers seeking efficient paper quality assessment, junior researchers learning to write insightful introductions, and research institutions conducting systematic evaluation of scholarly output. \textit{The problem} we address is the gap between quantitative bibliometrics and qualitative assessment of intellectual contribution~\cite{Arnaout2025IndepthRI,Vo2024AssessingSI}. Unlike citation analysis tools (e.g., Connected Papers~\cite{connectedpapers}) that focus on network structure, or critical reading assistants (e.g., InsightGUIDE~\cite{Koloveas2025InsightGUIDEAO}) that provide opinion-level guidance, InsightEval examines the \textit{semantic relationship} between a paper's claims and its supporting references and quantifies insightfulness along interpretable dimensions.
 
 In this demo, we introduce InsightEval, a novel system to evaluate the insightfulness of scientific papers in a comprehensive way. The overall architecture of the system consists of two main components:
 1) \textbf{the InsightEval Library}: an easy to use evaluation library which implements the four-stage evaluation pipeline, including opinion extraction, evidence retrieval, insight scoring, and report synthesis;
