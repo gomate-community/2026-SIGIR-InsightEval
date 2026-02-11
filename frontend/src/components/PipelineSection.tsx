@@ -1,65 +1,65 @@
-import { FileDown, Search, BarChart3, FileOutput, ArrowRight } from "lucide-react"
+import { FileText, Brain, BarChart3, FileCheck, ArrowRight } from "lucide-react"
 
 const phases = [
   {
     number: "I",
-    title: "Structure Parsing",
-    subtitle: "& Extraction",
+    title: "Opinion Sentence Extraction",
+    subtitle: "PDF Parsing & Classification",
     color: "bg-blue-500/10 border-blue-500/30",
     iconColor: "text-blue-600",
     items: [
-      "PDF Download + Text Extraction",
-      "Introduction Section Extraction",
+      "PDF Parsing via MinerU",
+      "Citation Marker Detection",
       "Sentence-Level Segmentation",
-      "Semantic Unit Classification",
+      "Citation / Opinion Classification",
     ],
-    description: "Context / Citation / Viewpoint",
-    icon: FileDown,
+    // description: "Input: Paper PDF → Output: Classified Sentences",
+    icon: FileText,
   },
   {
     number: "II",
-    title: "Evidence Retrieval",
-    subtitle: "& Alignment",
+    title: "Evidence Agentic Retrieval",
+    subtitle: "RAG-based Alignment",
     color: "bg-emerald-500/10 border-emerald-500/30",
     iconColor: "text-emerald-600",
     items: [
-      "Citation Extraction & Resolution",
-      "RAG-based Semantic Search",
-      "Top-k Candidate Set Selection",
-      "Evidence Alignment & Pairing",
+      "LLM-based Viewpoint Analysising",
+      "Citation Resolution to References",
+      "Semantic Retrieval from  PDFs",
+      "Evidence-Opinion Pair Construction",
     ],
-    description: "Wispaper / Abstract / Conclusion",
-    icon: Search,
+    // description: "Input: Opinion Sentences → Output: (Opinion, Evidence) Pairs",
+    icon: Brain,
   },
   {
     number: "III",
-    title: "Insight Scoring",
-    subtitle: "& Analysis",
+    title: "Multi-Dimensional Scoring",
+    subtitle: "LLM-based CoT Evaluation",
     color: "bg-amber-500/10 border-amber-500/30",
     iconColor: "text-amber-600",
     items: [
-      "Synthesis Score (Cross-document)",
-      "Critical Distance (Limitation)",
-      "Abstraction Level (Higher-level)",
-      "Overall Insight Assessment",
+      "Depth Score (1–5): Beyond Evidence",
+      "Breadth Score (1–5): Cross-source Synthesis",
+      "Height Score (1–5): Abstraction Level",
+      "Composite Insight Score Calculation",
     ],
-    description: "LLM-based CoT Evaluation",
+    // description: "Input: (Opinion, Evidence) → Output: Dimensional Scores",
     icon: BarChart3,
   },
   {
     number: "IV",
-    title: "Render",
-    subtitle: "& Visualization",
+    title: "Report Synthesis",
+    subtitle: "Paper-Level Assessment",
     color: "bg-indigo-500/10 border-indigo-500/30",
     iconColor: "text-indigo-600",
     items: [
-      "Report Rendering (JSON)",
-      "Interactive Visualization",
-      "Hierarchical Indentation",
-      "Export to MD/PDF/Website",
+      "Score Aggregation (Mean / Median)",
+      "Strengths & Weaknesses Analysis",
+      "Introduction + Scores →  Summary",
+      "Overall Insightfulness Report",
     ],
-    description: "Highlights / Radar Chart",
-    icon: FileOutput,
+    // description: "Input: All Scores → Output: Insight Report",
+    icon: FileCheck,
   },
 ]
 
@@ -69,10 +69,12 @@ export function PipelineSection() {
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl mb-4">
-            System Pipeline
+            Evaluation Pipeline
           </h2>
           <p className="text-lg text-muted-foreground text-pretty">
-            A four-phase automated workflow that transforms raw PDF papers into quantified insight assessments
+            A four-stage automated pipeline that extracts opinion sentences from scientific papers,
+            retrieves reference evidence, scores insightfulness along multiple dimensions,
+            and synthesizes a comprehensive evaluation report.
           </p>
         </div>
 
@@ -89,7 +91,7 @@ export function PipelineSection() {
                   </div>
                   <div>
                     <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-                      Phase {phase.number}
+                      Stage {phase.number}
                     </div>
                     <div className="font-semibold text-foreground">{phase.title}</div>
                   </div>
@@ -106,9 +108,9 @@ export function PipelineSection() {
                   ))}
                 </ul>
 
-                <div className="pt-4 border-t border-border/50">
-                  <span className="text-xs font-medium text-primary">{phase.description}</span>
-                </div>
+                {/*<div className="pt-4 border-t border-border/50">*/}
+                {/*  <span className="text-xs font-medium text-primary">{phase.description}</span>*/}
+                {/*</div>*/}
               </div>
 
               {/* Arrow connector */}
@@ -125,12 +127,12 @@ export function PipelineSection() {
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8 text-sm">
           <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30">
             <span className="font-semibold text-blue-600">INPUT</span>
-            <span className="text-muted-foreground">PDF / URL</span>
+            <span className="text-muted-foreground">Paper PDF + Reference PDFs</span>
           </div>
           <ArrowRight className="h-4 w-4 text-muted-foreground rotate-90 sm:rotate-0" />
           <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/30">
             <span className="font-semibold text-emerald-600">OUTPUT</span>
-            <span className="text-muted-foreground">MD / PDF / Website</span>
+            <span className="text-muted-foreground">Insightfulness Report + Scores</span>
           </div>
         </div>
       </div>
