@@ -11,3 +11,20 @@ We deploy InsightEval on over 100 human-written and 100 AI-generated scientific 
 
 
 ![demo.png](resources/demo.png)
+
+
+- Stage 1: Opinion Sentence Extraction
+
+![step1.png](resources/step1.png)
+
+- Stage 2: Evidence Retrieval via RAG
+
+![step2.png](resources/step2.png)
+
+- Stage 3: Multi-Dimensional Insight Scoring
+
+![step3.png](resources/step3.png)
+
+- Stage 4: Paper-Level Report Synthesis
+
+![step4.png](resources/step4.png)
